@@ -3,8 +3,8 @@ package presenters
 import (
 	"fmt"
 
-	"github.com/stackrox/acs-fleet-manager/internal/dinosaur/pkg/api/dbapi"
-	"github.com/stackrox/acs-fleet-manager/internal/dinosaur/pkg/api/public"
+	"github.com/stackrox/acs-fleet-manager/pkg/api/dbapi"
+	"github.com/stackrox/acs-fleet-manager/pkg/api/public"
 )
 
 const (

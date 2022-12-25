@@ -5,9 +5,9 @@ package fleetmanager
 
 import (
 	"context"
-	admin "github.com/stackrox/acs-fleet-manager/internal/dinosaur/pkg/api/admin/private"
-	"github.com/stackrox/acs-fleet-manager/internal/dinosaur/pkg/api/private"
-	"github.com/stackrox/acs-fleet-manager/internal/dinosaur/pkg/api/public"
+	admin "github.com/stackrox/acs-fleet-manager/pkg/api/admin/private"
+	"github.com/stackrox/acs-fleet-manager/pkg/api/private"
+	"github.com/stackrox/acs-fleet-manager/pkg/api/public"
 	"net/http"
 	"sync"
 )

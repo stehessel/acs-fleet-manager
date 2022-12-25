@@ -6,9 +6,9 @@ import (
 	"net/url"
 
 	"github.com/pkg/errors"
-	admin "github.com/stackrox/acs-fleet-manager/internal/dinosaur/pkg/api/admin/private"
-	"github.com/stackrox/acs-fleet-manager/internal/dinosaur/pkg/api/private"
-	"github.com/stackrox/acs-fleet-manager/internal/dinosaur/pkg/api/public"
+	admin "github.com/stackrox/acs-fleet-manager/pkg/api/admin/private"
+	"github.com/stackrox/acs-fleet-manager/pkg/api/private"
+	"github.com/stackrox/acs-fleet-manager/pkg/api/public"
 )
 
 //go:generate moq -out api_moq.go . PublicAPI PrivateAPI AdminAPI

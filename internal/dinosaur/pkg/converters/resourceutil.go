@@ -3,11 +3,11 @@ package converters
 import (
 	"fmt"
 
-	admin "github.com/stackrox/acs-fleet-manager/internal/dinosaur/pkg/api/admin/private"
-	adminPrivate "github.com/stackrox/acs-fleet-manager/internal/dinosaur/pkg/api/admin/private"
-	"github.com/stackrox/acs-fleet-manager/internal/dinosaur/pkg/api/dbapi"
-	"github.com/stackrox/acs-fleet-manager/internal/dinosaur/pkg/api/private"
-	"github.com/stackrox/acs-fleet-manager/internal/dinosaur/pkg/api/public"
+	admin "github.com/stackrox/acs-fleet-manager/pkg/api/admin/private"
+	adminPrivate "github.com/stackrox/acs-fleet-manager/pkg/api/admin/private"
+	"github.com/stackrox/acs-fleet-manager/pkg/api/dbapi"
+	"github.com/stackrox/acs-fleet-manager/pkg/api/private"
+	"github.com/stackrox/acs-fleet-manager/pkg/api/public"
 	"github.com/stackrox/rox/operator/apis/platform/v1alpha1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/resource"

@@ -404,10 +404,10 @@ openapi/generate: openapi/generate/public openapi/generate/private openapi/gener
 .PHONY: openapi/generate
 
 openapi/generate/public: $(GOBINDATA_BIN) openapi-generator
-	rm -rf internal/dinosaur/pkg/api/public
+	rm -rf pkg/api/public
 	$(OPENAPI_GENERATOR) validate -i openapi/fleet-manager.yaml
-	$(OPENAPI_GENERATOR) generate -i openapi/fleet-manager.yaml -g go -o internal/dinosaur/pkg/api/public --package-name public -t openapi/templates --ignore-file-override ./.openapi-generator-ignore
-	$(GOFMT) -w internal/dinosaur/pkg/api/public
+	$(OPENAPI_GENERATOR) generate -i openapi/fleet-manager.yaml -g go -o pkg/api/public --package-name public -t openapi/templates --ignore-file-override ./.openapi-generator-ignore
+	$(GOFMT) -w pkg/api/public
 
 	mkdir -p .generate/openapi
 	cp ./openapi/fleet-manager.yaml .generate/openapi
@@ -417,17 +417,17 @@ openapi/generate/public: $(GOBINDATA_BIN) openapi-generator
 .PHONY: openapi/generate/public
 
 openapi/generate/private: $(GOBINDATA_BIN) openapi-generator
-	rm -rf internal/dinosaur/pkg/api/private
+	rm -rf pkg/api/private
 	$(OPENAPI_GENERATOR) validate -i openapi/fleet-manager-private.yaml
-	$(OPENAPI_GENERATOR) generate -i openapi/fleet-manager-private.yaml -g go -o internal/dinosaur/pkg/api/private --package-name private -t openapi/templates --ignore-file-override ./.openapi-generator-ignore
-	$(GOFMT) -w internal/dinosaur/pkg/api/private
+	$(OPENAPI_GENERATOR) generate -i openapi/fleet-manager-private.yaml -g go -o pkg/api/private --package-name private -t openapi/templates --ignore-file-override ./.openapi-generator-ignore
+	$(GOFMT) -w pkg/api/private
 .PHONY: openapi/generate/private
 
 openapi/generate/admin: $(GOBINDATA_BIN) openapi-generator
-	rm -rf internal/dinosaur/pkg/api/admin/private
+	rm -rf pkg/api/admin/private
 	$(OPENAPI_GENERATOR) validate -i openapi/fleet-manager-private-admin.yaml
-	$(OPENAPI_GENERATOR) generate -i openapi/fleet-manager-private-admin.yaml -g go -o internal/dinosaur/pkg/api/admin/private --package-name private -t openapi/templates --ignore-file-override ./.openapi-generator-ignore
-	$(GOFMT) -w internal/dinosaur/pkg/api/admin/private
+	$(OPENAPI_GENERATOR) generate -i openapi/fleet-manager-private-admin.yaml -g go -o pkg/api/admin/private --package-name private -t openapi/templates --ignore-file-override ./.openapi-generator-ignore
+	$(GOFMT) -w pkg/api/admin/private
 .PHONY: openapi/generate/admin
 
 openapi/generate/rhsso: $(GOBINDATA_BIN) openapi-generator

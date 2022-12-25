@@ -5,7 +5,7 @@ import (
 	"os"
 	"sort"
 
-	"github.com/stackrox/acs-fleet-manager/internal/dinosaur/pkg/api/public"
+	"github.com/stackrox/acs-fleet-manager/pkg/api/public"
 	"github.com/stackrox/acs-fleet-manager/pkg/environments"
 	"github.com/stackrox/acs-fleet-manager/pkg/flags"
 	"github.com/stackrox/acs-fleet-manager/pkg/handlers"
